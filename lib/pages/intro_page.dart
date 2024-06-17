@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -9,11 +11,46 @@ class IntroPage extends StatelessWidget {
       backgroundColor: Colors.grey[300],
       body: 
         Center(
-          child: Column(
-            children: [
-              Image(image:AssetImage('images/logo.png')),
-              Text("save money, don't just do it"),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Image(image:AssetImage('images/logo.png')),
+                Text(
+                  "Don't Just Do It",
+                  style:TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  )
+                ),
+                SizedBox(height: 24,),
+                Text(
+                  "Classic Sneaker and custom kicks made with premium quality",
+                  style:TextStyle(
+                    fontSize: 16,
+                    color: Colors.grey
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 24),
+                Container(
+                  padding: EdgeInsets.all(18),
+                  decoration: BoxDecoration(
+                    color: Colors.grey[900],
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Center(
+                    child: Text("Shop Now",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    )
+                    ),
+                      
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
     );
