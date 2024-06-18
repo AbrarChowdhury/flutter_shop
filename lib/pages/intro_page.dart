@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_e_commerse/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -14,6 +15,7 @@ class IntroPage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image(image:AssetImage('images/logo.png')),
                 Text(
@@ -33,20 +35,23 @@ class IntroPage extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 24),
-                Container(
-                  padding: EdgeInsets.all(18),
-                  decoration: BoxDecoration(
-                    color: Colors.grey[900],
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Center(
-                    child: Text("Shop Now",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                    )
+                GestureDetector(
+                  onTap:()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage())),
+                  child: Container(
+                    padding: EdgeInsets.all(18),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[900],
+                      borderRadius: BorderRadius.circular(12),
                     ),
-                      
+                    child: Center(
+                      child: Text("Shop Now",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      )
+                      ),
+                        
+                    ),
                   ),
                 ),
               ],
