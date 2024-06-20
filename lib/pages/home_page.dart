@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerse/components/bottom_nav_bar.dart';
@@ -30,6 +32,7 @@ class _HomePageState extends State<HomePage> {
 
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         leading: Builder(
           builder: (context) =>IconButton(
               icon: Icon(Icons.menu), 
@@ -37,16 +40,13 @@ class _HomePageState extends State<HomePage> {
                 Scaffold.of(context).openDrawer();
               },
             ),
-          
-        ),
+          ),
       ),
       drawer: Drawer(
         backgroundColor: Colors.grey[900],
         child:Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            
-
             Column(
               children: [
                 DrawerHeader(child: Image.asset('images/logo.png', color:Colors.white)),
